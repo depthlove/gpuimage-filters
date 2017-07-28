@@ -32,6 +32,7 @@ UICollectionViewDelegateFlowLayout
 @property (strong, nonatomic) NSString *imageName;
 @property (strong, nonatomic) NSString *imageNamePath;
 @property (strong, nonatomic) UIButton *saveAllFilterImagesButton;
+@property (strong, nonatomic) UIButton *saveCurrentFilterImageToPhotoAlbumButton;
 @end
 
 @implementation ViewController
@@ -60,13 +61,21 @@ UICollectionViewDelegateFlowLayout
     }
     
     // ...
+    self.saveCurrentFilterImageToPhotoAlbumButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.saveCurrentFilterImageToPhotoAlbumButton.frame = CGRectMake(20, PLS_SCREEN_WIDTH + 30, 300, 45);
+    [self.saveCurrentFilterImageToPhotoAlbumButton setTitle:@"save current image to photoalbum" forState:UIControlStateNormal];
+    [self.saveCurrentFilterImageToPhotoAlbumButton setBackgroundColor:[UIColor blackColor]];
+    [self.view addSubview:self.saveCurrentFilterImageToPhotoAlbumButton];
+    [self.saveCurrentFilterImageToPhotoAlbumButton addTarget:self action:@selector(saveCurrentFilterImageToPhotoAlbumButtonEvent:) forControlEvents:UIControlEventTouchUpInside];
+    
+    // ...
     self.saveAllFilterImagesButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.saveAllFilterImagesButton.frame = CGRectMake(PLS_SCREEN_WIDTH - 180, PLS_SCREEN_WIDTH + 30, 160, 45);
+    self.saveAllFilterImagesButton.frame = CGRectMake(20, PLS_SCREEN_WIDTH + 95, 160, 45);
     [self.saveAllFilterImagesButton setTitle:@"save all" forState:UIControlStateNormal];
     [self.saveAllFilterImagesButton setBackgroundColor:[UIColor blackColor]];
     [self.view addSubview:self.saveAllFilterImagesButton];
     [self.saveAllFilterImagesButton addTarget:self action:@selector(saveAllFilterImagesButtonEvent:) forControlEvents:UIControlEventTouchUpInside];
-    
+
     // ...
     self.filterGroup = [[PLSFilterGroup alloc] init];
 
@@ -155,6 +164,36 @@ UICollectionViewDelegateFlowLayout
 }
 
 #pragma mark -
+- (void)saveCurrentFilterImageToPhotoAlbumButtonEvent:(id)sender {
+    NSString *filterName;
+    UIImage *outputImage;
+    
+    NSLog(@"start current image to photoalbum...");
+    NSLog(@"current filter name: %@", self.filterGroup.filterName);
+    
+    filterName = self.filterGroup.filterName;
+    outputImage = [self applyFilter:self.image];
+    
+    UIImageWriteToSavedPhotosAlbum(outputImage, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
+
+    
+    NSLog(@"save current to photoalbum successed.");
+}
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
+    NSString *msg = nil ;
+    if(error != NULL){
+        msg = @"save current image to photoalbum failed." ;
+    }else{
+        msg = @"save current image to photoalbum successed." ;
+    }
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"WARNING" message:msg preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    [alert addAction:OKAction];
+    [self showViewController:alert sender:nil];
+}
+
 - (void)saveAllFilterImagesButtonEvent:(id)sender {
     NSString *filterName;
     UIImage *outputImage;
@@ -170,7 +209,7 @@ UICollectionViewDelegateFlowLayout
         [self saveImage:outputImage filterName:filterName];
     }
     
-    NSLog(@"save all filter image success.");
+    NSLog(@"save all filter image successed.");
 }
 
 - (void)saveImage:(UIImage *)image filterName:(NSString *)filterName {
