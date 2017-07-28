@@ -10,6 +10,10 @@
 #import "PLSEditVideoCell.h"
 #import "PLSFilterGroup.h"
 
+/**
+ * some resources from https://github.com/pili-engineering/PLShortVideoKit
+ */
+
 #define PLS_SCREEN_WIDTH CGRectGetWidth([UIScreen mainScreen].bounds)
 #define PLS_SCREEN_HEIGHT CGRectGetHeight([UIScreen mainScreen].bounds)
 
@@ -40,7 +44,7 @@ UICollectionViewDelegateFlowLayout
     self.view.backgroundColor = [UIColor grayColor];
     
     // ...
-    self.imageName = @"Group2-2x";
+    self.imageName = @"liqin";
     self.image = [UIImage imageNamed:self.imageName];
     self.imageView = [[UIImageView alloc] initWithImage:self.image];
     self.imageView.frame = CGRectMake(0, 20, PLS_SCREEN_WIDTH, PLS_SCREEN_WIDTH);
