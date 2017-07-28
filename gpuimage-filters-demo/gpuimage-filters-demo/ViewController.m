@@ -68,7 +68,7 @@ UINavigationControllerDelegate
     // ...
     self.selectImageFromPhotoAlbumButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.selectImageFromPhotoAlbumButton.frame = CGRectMake(20, PLS_SCREEN_WIDTH + 30, 300, 45);
-    [self.selectImageFromPhotoAlbumButton setTitle:@"select image from photoalbum" forState:UIControlStateNormal];
+    [self.selectImageFromPhotoAlbumButton setTitle:@"select image from PhotoAlbum" forState:UIControlStateNormal];
     [self.selectImageFromPhotoAlbumButton setBackgroundColor:[UIColor blackColor]];
     [self.view addSubview:self.selectImageFromPhotoAlbumButton];
     [self.selectImageFromPhotoAlbumButton addTarget:self action:@selector(selectImageFromPhotoAlbumButtonEvent:) forControlEvents:UIControlEventTouchUpInside];
@@ -76,7 +76,7 @@ UINavigationControllerDelegate
     // ...
     self.saveCurrentFilterImageToPhotoAlbumButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.saveCurrentFilterImageToPhotoAlbumButton.frame = CGRectMake(20, PLS_SCREEN_WIDTH + 85, 300, 45);
-    [self.saveCurrentFilterImageToPhotoAlbumButton setTitle:@"save current image to photoalbum" forState:UIControlStateNormal];
+    [self.saveCurrentFilterImageToPhotoAlbumButton setTitle:@"save current image to PhotoAlbum" forState:UIControlStateNormal];
     [self.saveCurrentFilterImageToPhotoAlbumButton setBackgroundColor:[UIColor blackColor]];
     [self.view addSubview:self.saveCurrentFilterImageToPhotoAlbumButton];
     [self.saveCurrentFilterImageToPhotoAlbumButton addTarget:self action:@selector(saveCurrentFilterImageToPhotoAlbumButtonEvent:) forControlEvents:UIControlEventTouchUpInside];
