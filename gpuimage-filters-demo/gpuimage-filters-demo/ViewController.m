@@ -125,7 +125,7 @@ UINavigationControllerDelegate
     
     // ...
     self.imagePickerController = [[UIImagePickerController alloc]init];
-    self.imagePickerController.view.backgroundColor = [UIColor orangeColor];
+    self.imagePickerController.view.backgroundColor = [UIColor grayColor];
     self.imagePickerController.delegate = self;
 //    self.imagePickerController.allowsEditing = YES;
 }
@@ -179,6 +179,11 @@ UINavigationControllerDelegate
         outputImage = [filter imageFromCurrentFramebuffer];
     }
     
+    [stillImageSource removeAllTargets];
+    [filter removeAllTargets];
+    stillImageSource = nil;
+    filter = nil;
+    
     return outputImage;
 }
 
@@ -225,15 +230,23 @@ UINavigationControllerDelegate
     NSLog(@"start to filter image...");
 
     for (NSInteger filterIndex = 0; filterIndex < self.filterGroup.filtersInfo.count; filterIndex++) {
-        self.filterGroup.filterIndex = filterIndex;
-        filterName = self.filterGroup.filterName;
+        @autoreleasepool {
+            self.filterGroup.filterIndex = filterIndex;
+            filterName = self.filterGroup.filterName;
 
-        outputImage = [self applyFilter:self.image];
-        
-        [self saveImage:outputImage filterName:filterName];
+            outputImage = [self applyFilter:self.image];
+            
+            [self saveImage:outputImage filterName:filterName];
+        }
     }
     
     NSLog(@"save all filter image successed.");
+    
+    NSString *msg = @"save all filter image to SandBox successed.";
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"WARNING" message:msg preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    [alert addAction:OKAction];
+    [self showViewController:alert sender:nil];
 }
 
 - (void)saveImage:(UIImage *)image filterName:(NSString *)filterName {
@@ -258,11 +271,6 @@ UINavigationControllerDelegate
 }
 
 #pragma mark - UIImagePickerControllerDelegate
-//- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(nullable NSDictionary<NSString *,id> *)editingInfo {
-//    self.imageView.image = image;
-//    [self dismissViewControllerAnimated:YES completion:nil];
-//}
-
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     // use UIImagePickerControllerMediaType to judge photo or video
     if (picker.sourceType == UIImagePickerControllerSourceTypePhotoLibrary) {
@@ -303,6 +311,11 @@ UINavigationControllerDelegate
 #pragma mark -- hide status bar
 - (BOOL)prefersStatusBarHidden {
     return YES;
+}
+
+#pragma mark -
+- (void)dealloc {
+
 }
 
 @end
