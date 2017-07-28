@@ -13,6 +13,13 @@
 		0A08D4131F29E754002279D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A08D4111F29E754002279D1 /* Main.storyboard */; };
 		0A08D4151F29E754002279D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A08D4141F29E754002279D1 /* Assets.xcassets */; };
 		0A08D4181F29E754002279D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A08D4161F29E754002279D1 /* LaunchScreen.storyboard */; };
+		0A08D4241F29EB39002279D1 /* PLShortVideoKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0A08D4231F29EB39002279D1 /* PLShortVideoKit.bundle */; };
+		0A08D4291F29EBA0002279D1 /* PLSEditVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A08D4281F29EBA0002279D1 /* PLSEditVideoCell.m */; };
+		0A08D42C1F29ECC0002279D1 /* PLSFilterGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A08D42B1F29ECC0002279D1 /* PLSFilterGroup.m */; };
+		0A08D43C1F29F3C9002279D1 /* Group2-2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A08D43A1F29F3C9002279D1 /* Group2-2x.png */; };
+		0A08D43D1F29F3C9002279D1 /* Group2-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A08D43B1F29F3C9002279D1 /* Group2-3x.png */; };
+		0A08D4431F29F502002279D1 /* PLSGPUImageCustomFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A08D4421F29F502002279D1 /* PLSGPUImageCustomFilter.m */; };
+		FA0183182A6BC8C5C3F7B18E /* libPods-gpuimage-filters-demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E64A7FD23A7BECE5673B6C /* libPods-gpuimage-filters-demo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,18 @@
 		0A08D4141F29E754002279D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A08D4171F29E754002279D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A08D4191F29E754002279D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A08D4231F29EB39002279D1 /* PLShortVideoKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PLShortVideoKit.bundle; sourceTree = "<group>"; };
+		0A08D4271F29EBA0002279D1 /* PLSEditVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLSEditVideoCell.h; sourceTree = "<group>"; };
+		0A08D4281F29EBA0002279D1 /* PLSEditVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLSEditVideoCell.m; sourceTree = "<group>"; };
+		0A08D42A1F29ECC0002279D1 /* PLSFilterGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLSFilterGroup.h; sourceTree = "<group>"; };
+		0A08D42B1F29ECC0002279D1 /* PLSFilterGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLSFilterGroup.m; sourceTree = "<group>"; };
+		0A08D43A1F29F3C9002279D1 /* Group2-2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Group2-2x.png"; path = "Resource/Group2-2x.png"; sourceTree = "<group>"; };
+		0A08D43B1F29F3C9002279D1 /* Group2-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Group2-3x.png"; path = "Resource/Group2-3x.png"; sourceTree = "<group>"; };
+		0A08D4411F29F502002279D1 /* PLSGPUImageCustomFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLSGPUImageCustomFilter.h; sourceTree = "<group>"; };
+		0A08D4421F29F502002279D1 /* PLSGPUImageCustomFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLSGPUImageCustomFilter.m; sourceTree = "<group>"; };
+		C4585AD114606FA7F58C1DFD /* Pods-gpuimage-filters-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gpuimage-filters-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gpuimage-filters-demo/Pods-gpuimage-filters-demo.debug.xcconfig"; sourceTree = "<group>"; };
+		D8E64A7FD23A7BECE5673B6C /* libPods-gpuimage-filters-demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-gpuimage-filters-demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3EE61E677B9F091996ABC72 /* Pods-gpuimage-filters-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gpuimage-filters-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-gpuimage-filters-demo/Pods-gpuimage-filters-demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0183182A6BC8C5C3F7B18E /* libPods-gpuimage-filters-demo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +64,8 @@
 			children = (
 				0A08D4071F29E754002279D1 /* gpuimage-filters-demo */,
 				0A08D4061F29E754002279D1 /* Products */,
+				C171759098C4A32C9F37688F /* Pods */,
+				15AF781A584400DFD3663146 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +80,13 @@
 		0A08D4071F29E754002279D1 /* gpuimage-filters-demo */ = {
 			isa = PBXGroup;
 			children = (
+				0A08D4231F29EB39002279D1 /* PLShortVideoKit.bundle */,
+				0A08D4271F29EBA0002279D1 /* PLSEditVideoCell.h */,
+				0A08D4281F29EBA0002279D1 /* PLSEditVideoCell.m */,
+				0A08D42A1F29ECC0002279D1 /* PLSFilterGroup.h */,
+				0A08D42B1F29ECC0002279D1 /* PLSFilterGroup.m */,
+				0A08D4411F29F502002279D1 /* PLSGPUImageCustomFilter.h */,
+				0A08D4421F29F502002279D1 /* PLSGPUImageCustomFilter.m */,
 				0A08D40B1F29E754002279D1 /* AppDelegate.h */,
 				0A08D40C1F29E754002279D1 /* AppDelegate.m */,
 				0A08D40E1F29E754002279D1 /* ViewController.h */,
@@ -74,9 +103,28 @@
 		0A08D4081F29E754002279D1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0A08D43A1F29F3C9002279D1 /* Group2-2x.png */,
+				0A08D43B1F29F3C9002279D1 /* Group2-3x.png */,
 				0A08D4091F29E754002279D1 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		15AF781A584400DFD3663146 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8E64A7FD23A7BECE5673B6C /* libPods-gpuimage-filters-demo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C171759098C4A32C9F37688F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C4585AD114606FA7F58C1DFD /* Pods-gpuimage-filters-demo.debug.xcconfig */,
+				E3EE61E677B9F091996ABC72 /* Pods-gpuimage-filters-demo.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +134,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A08D41C1F29E754002279D1 /* Build configuration list for PBXNativeTarget "gpuimage-filters-demo" */;
 			buildPhases = (
+				E411900B89E06640451D549D /* [CP] Check Pods Manifest.lock */,
 				0A08D4011F29E754002279D1 /* Sources */,
 				0A08D4021F29E754002279D1 /* Frameworks */,
 				0A08D4031F29E754002279D1 /* Resources */,
+				7E4E5F285CAE7A1DB6BFB985 /* [CP] Embed Pods Frameworks */,
+				F66F5FBF06BBF9D946E701AE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -139,6 +190,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A08D4181F29E754002279D1 /* LaunchScreen.storyboard in Resources */,
+				0A08D43C1F29F3C9002279D1 /* Group2-2x.png in Resources */,
+				0A08D4241F29EB39002279D1 /* PLShortVideoKit.bundle in Resources */,
+				0A08D43D1F29F3C9002279D1 /* Group2-3x.png in Resources */,
 				0A08D4151F29E754002279D1 /* Assets.xcassets in Resources */,
 				0A08D4131F29E754002279D1 /* Main.storyboard in Resources */,
 			);
@@ -146,13 +200,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7E4E5F285CAE7A1DB6BFB985 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gpuimage-filters-demo/Pods-gpuimage-filters-demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E411900B89E06640451D549D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F66F5FBF06BBF9D946E701AE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gpuimage-filters-demo/Pods-gpuimage-filters-demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0A08D4011F29E754002279D1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0A08D4101F29E754002279D1 /* ViewController.m in Sources */,
+				0A08D4291F29EBA0002279D1 /* PLSEditVideoCell.m in Sources */,
+				0A08D4431F29F502002279D1 /* PLSGPUImageCustomFilter.m in Sources */,
 				0A08D40D1F29E754002279D1 /* AppDelegate.m in Sources */,
+				0A08D42C1F29ECC0002279D1 /* PLSFilterGroup.m in Sources */,
 				0A08D40A1F29E754002279D1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +378,7 @@
 		};
 		0A08D41D1F29E754002279D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4585AD114606FA7F58C1DFD /* Pods-gpuimage-filters-demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UVZ7B46BL3;
@@ -286,6 +392,7 @@
 		};
 		0A08D41E1F29E754002279D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3EE61E677B9F091996ABC72 /* Pods-gpuimage-filters-demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UVZ7B46BL3;
@@ -316,6 +423,7 @@
 				0A08D41E1F29E754002279D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
