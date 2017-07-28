@@ -22,7 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A08D4051F29E754002279D1 /* gpuimage-filters-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gpuimage-filters-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A08D4051F29E754002279D1 /* PLFilterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PLFilterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A08D4091F29E754002279D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0A08D40B1F29E754002279D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0A08D40C1F29E754002279D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 		0A08D4061F29E754002279D1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0A08D4051F29E754002279D1 /* gpuimage-filters-demo.app */,
+				0A08D4051F29E754002279D1 /* PLFilterDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,7 +144,7 @@
 			);
 			name = "gpuimage-filters-demo";
 			productName = "gpuimage-filters-demo";
-			productReference = 0A08D4051F29E754002279D1 /* gpuimage-filters-demo.app */;
+			productReference = 0A08D4051F29E754002279D1 /* PLFilterDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -382,7 +382,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.stm.gpuimage-filters-demo";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PLFilterDemo;
 			};
 			name = Debug;
 		};
@@ -396,7 +396,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.stm.gpuimage-filters-demo";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PLFilterDemo;
 			};
 			name = Release;
 		};
