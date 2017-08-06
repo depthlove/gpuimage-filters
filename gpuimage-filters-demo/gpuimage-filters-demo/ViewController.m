@@ -240,6 +240,12 @@ UINavigationControllerDelegate
         }
     }
     
+    // copy filter plsfilters.json to sandbox
+    NSString *bundlePath = [NSBundle mainBundle].bundlePath;
+    NSString *filtersPath = [bundlePath stringByAppendingString:@"/PLShortVideoKit.bundle/colorFilter"];
+    NSString *jsonPath = [filtersPath stringByAppendingString:@"/plsfilters.json"];
+    [self copyMissingFile:jsonPath toPath:self.imageNamePath];
+    
     NSLog(@"save all filter image successed.");
     
     NSString *msg = @"save all filter image to SandBox successed.";
