@@ -236,7 +236,7 @@ UINavigationControllerDelegate
 
             outputImage = [self applyFilter:self.image];
             
-            [self saveImage:outputImage filterName:filterName];
+            [self saveImage:outputImage filterName:filterName filterIndex:filterIndex];
         }
     }
     
@@ -249,7 +249,7 @@ UINavigationControllerDelegate
     [self showViewController:alert sender:nil];
 }
 
-- (void)saveImage:(UIImage *)image filterName:(NSString *)filterName {
+- (void)saveImage:(UIImage *)image filterName:(NSString *)filterName filterIndex:(NSInteger)filterIndex {
     NSString *path = [self.imageNamePath stringByAppendingPathComponent:filterName];
     NSFileManager *fileManager = [NSFileManager defaultManager];
     if(![fileManager fileExistsAtPath:path]) {
@@ -268,6 +268,28 @@ UINavigationControllerDelegate
 //    // The value 'image' must be a UIImage object
 //    // The value '1.0' represents image compression quality as value from 0.0 to 1.0
 //    [UIImageJPEGRepresentation(image, 1.0) writeToFile:jpgPath atomically:YES];
+    
+    // copy filter colorImage to sandbox
+    NSDictionary *filterInfoDic = self.filtersArray[filterIndex];
+    NSString *colorImagePath = [filterInfoDic objectForKey:@"colorImagePath"];
+    [self copyMissingFile:colorImagePath toPath:path];
+}
+
+/**
+ *    @brief     copy colorFilter filter.png to sandbox
+ *
+ *    @param     sourcePath colorFilter filter.png path
+ *    @param     toPath     des path
+ *
+ *    @return    BOOL
+ */
+- (BOOL)copyMissingFile:(NSString *)sourcePath toPath:(NSString *)toPath {
+    BOOL retVal = YES; // If the file already exists, we'll return success…
+    NSString * finalLocation = [toPath stringByAppendingPathComponent:[sourcePath lastPathComponent]];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:finalLocation]) {
+        retVal = [[NSFileManager defaultManager] copyItemAtPath:sourcePath toPath:finalLocation error:NULL];
+    }
+    return retVal;
 }
 
 #pragma mark - UIImagePickerControllerDelegate
